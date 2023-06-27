@@ -10,37 +10,7 @@ def artifactId = 'VideoView'
 
 apply plugin: 'maven-publish'
 
-afterEvaluate {
-    publishing {
-        publications {
-            plugin(MavenPublication) {
-//                from components.java
-                println(project.group)
-                println(artifactId)
-                println(project.version)
-                groupId = project.group
-                artifactId = artifactId
-                version = version
-            }
-        }
-        repositories {
-            maven {
-                url = 'https://packages.aliyun.com/maven/repository/2176572-release-HjA7yO/'
-                credentials {
-                    username = '6059642bc7ac6c14681b30d0'
-                    password = 'a-EJMRxs7wpI'
-                }
-            }
-            maven {
-                url = 'https://packages.aliyun.com/maven/repository/2176572-snapshot-faNPAu/'
-                credentials {
-                    username = '6059642bc7ac6c14681b30d0'
-                    password = 'a-EJMRxs7wpI'
-                }
-            }
-        }
-    }
-}
+
 
 android {
     compileSdk 33
