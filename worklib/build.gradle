@@ -1,15 +1,6 @@
 plugins {
     id 'com.android.library'
-    // Gradle 7.0+ 版本
-    id 'maven-publish'
 }
-
-group 'com.qinque.worklib'
-version '1.0.0'
-def artifactId = 'VideoView'
-
-apply plugin: 'maven-publish'
-
 
 
 android {

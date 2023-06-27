@@ -6,16 +6,16 @@ import android.widget.LinearLayout;
 
 import androidx.annotation.Nullable;
 
-public class VideoView extends LinearLayout {
-    public VideoView(Context context) {
+public class MyVideoView extends LinearLayout {
+    public MyVideoView(Context context) {
         super(context);
     }
 
-    public VideoView(Context context, @Nullable AttributeSet attrs) {
+    public MyVideoView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public VideoView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public MyVideoView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 }
