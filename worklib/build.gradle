@@ -1,0 +1,75 @@
+plugins {
+    id 'com.android.library'
+    // Gradle 7.0+ 版本
+    id 'maven-publish'
+}
+
+group 'com.qinque.worklib'
+version '1.0.0'
+def artifactId = 'VideoView'
+
+apply plugin: 'maven-publish'
+
+afterEvaluate {
+    publishing {
+        publications {
+            plugin(MavenPublication) {
+//                from components.java
+                println(project.group)
+                println(artifactId)
+                println(project.version)
+                groupId = project.group
+                artifactId = artifactId
+                version = version
+            }
+        }
+        repositories {
+            maven {
+                url = 'https://packages.aliyun.com/maven/repository/2176572-release-HjA7yO/'
+                credentials {
+                    username = '6059642bc7ac6c14681b30d0'
+                    password = 'a-EJMRxs7wpI'
+                }
+            }
+            maven {
+                url = 'https://packages.aliyun.com/maven/repository/2176572-snapshot-faNPAu/'
+                credentials {
+                    username = '6059642bc7ac6c14681b30d0'
+                    password = 'a-EJMRxs7wpI'
+                }
+            }
+        }
+    }
+}
+
+android {
+    compileSdk 33
+
+    defaultConfig {
+        minSdk 21
+        targetSdk 33
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+}

@@ -1,0 +1,57 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+
+        maven {
+            url 'https://maven.aliyun.com/repository/public'
+        }
+        maven {
+            credentials {
+                username '6059642bc7ac6c14681b30d0'
+                password 'a-EJMRxs7wpI'
+            }
+            url 'https://packages.aliyun.com/maven/repository/2176572-release-HjA7yO/'
+        }
+        maven {
+            credentials {
+                username '6059642bc7ac6c14681b30d0'
+                password 'a-EJMRxs7wpI'
+            }
+            url 'https://packages.aliyun.com/maven/repository/2176572-snapshot-faNPAu/'
+        }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "forlib"
+include ':app'
+include ':worklib'
+//
+//allprojects {
+//    repositories {
+//        maven {
+//            url 'https://maven.aliyun.com/repository/public'
+//        }
+//        maven {
+//            credentials {
+//                username '6059642bc7ac6c14681b30d0'
+//                password 'a-EJMRxs7wpI'
+//            }
+//            url 'https://packages.aliyun.com/maven/repository/2176572-release-HjA7yO/'
+//        }
+//        maven {
+//            credentials {
+//                username '6059642bc7ac6c14681b30d0'
+//                password 'a-EJMRxs7wpI'
+//            }
+//            url 'https://packages.aliyun.com/maven/repository/2176572-snapshot-faNPAu/'
+//        }
+//    }
+//}
